@@ -8,6 +8,7 @@ export default function Header() {
         <Image 
           alt="logo"
           className="h-auto w-1/2 md:w-full"
+          priority
           src={logo}
         />
       </div>
