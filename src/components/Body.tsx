@@ -104,7 +104,7 @@ const heatLevelData = {
 const sideData = {
   heading: 'SIDES',
   largePrice: '$5.00',
-  sides: ['French Fries','Potato Salad','Cole Slaw','Mac & Cheese','Southern Greens'],
+  sides: ['French Fries','Potato Salad','Cole Slaw','Mac & Cheese','Grilled Corn'],
   smallPrice: '$3.00'
 };
 
