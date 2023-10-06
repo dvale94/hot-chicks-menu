@@ -11,9 +11,12 @@ type BeveragesSectionProps = {
 export default function BeveragesSection({ beverages, heading }: BeveragesSectionProps) {
   return (
     <AltSection heading={heading}>
-      <div className="flex flex-row flex-wrap justify-center w-full">
+      <div className="flex flex-col justify-center w-full">
         {beverages.map(({ name, price }) => (
-          <p className="text-white text-sm basis-full md:basis-1/2 text-center mt-1" key={name}>{name} <span className="text-yellow-400">{price}</span></p>
+          <div key={name} className="flex flex-col justify-center w-full">
+            <p className="text-white text-sm text-center mt-1">{name}</p>
+            <p className="text-yellow-400 text-center">{price}</p>
+          </div>
         ))}
       </div>
     </AltSection>

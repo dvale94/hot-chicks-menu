@@ -12,9 +12,9 @@ type HeatLevelsSectionProps = {
 export default function HeatLevelsSection({ heading, levels }: HeatLevelsSectionProps) {
   return (
     <AltSection heading={heading}>
-      <div className="flex flex-row flex-wrap justify-center w-full">
+      <div className="flex flex-col justify-center">
         {levels.map(({ color, description, level }) => (
-          <p className="basis-full md:basis-1/3 text-white text-center text-sm mt-1" key={level}><span className={`text-${color}`}>{level}</span> ({description})</p>
+          <p className="text-white text-center text-sm mt-1" key={level}><span className={`text-${color}`}>{level}</span> ({description})</p>
         ))}
       </div>
 

@@ -55,12 +55,21 @@ const chickenData = {
       ]
     },
     {
-      description: 'Leg & Thigh',
+      description: '',
       name: 'Korean Chicken Wings (Whole)',
       hasSizes: true,
       sizes: [
         {text: 'Small(3)', price: '$9.00'},
         {text: 'Large(5)', price: '$14.00'}
+      ]
+    },
+    {
+      description: 'Wings or Tenders',
+      name: 'Chicken & Croffle',
+      hasSizes: true,
+      sizes: [
+        {text: 'Small(3)', price: '$12.00'},
+        {text: 'Large(5)', price: '$17.00'}
       ]
     },
   ]
@@ -114,7 +123,7 @@ const beveragesData = {
     {name: 'Fountain Drinks', price: '$3.00'},
     {name: 'Bottled Water', price: '$2.00'},
     {name: 'House-Brewed Sweet Tea', price: '$3.00'},
-    {name: 'Bottled Beverages', price: '$2.00'}
+    {name: 'Soda Cans', price: '$2.00'}
   ]
 };
 
@@ -145,7 +154,12 @@ const extrasData = {
       hasSizes: false,
       price: '$0.50'
     },
-    
+    {
+      description: 'Croffle',
+      name: '',
+      hasSizes: false,
+      price: '$4.00'
+    },
   ]
 }
 
@@ -155,9 +169,11 @@ export default function Body() {
       <Section {...chickenData} itemBasisStyle="basis-1/2 md:basis-1/3"/>
       <HeatLevelsSection {...heatLevelData}/>
       <Section {...sandwichData} itemBasisStyle="basis-full md:basis-1/2"/>
-      <SidesSection {...sideData}/>
-      <Section {...extrasData}/>
-      <BeveragesSection {...beveragesData}/>
+      <div className="flex flex-row justify-center">
+        <BeveragesSection {...beveragesData}/>
+        <SidesSection {...sideData}/>
+      </div>
+      <Section {...extrasData} itemBasisStyle="basis-1/5"/>
     </div>
   )
 };
