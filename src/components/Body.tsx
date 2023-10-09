@@ -113,7 +113,7 @@ const heatLevelData = {
 const sideData = {
   heading: 'SIDES',
   largePrice: '$5.00',
-  sides: ['French Fries','Potato Salad','Cole Slaw','Mac & Cheese','Grilled Corn'],
+  sides: ['French Fries','Potato Salad','Cole Slaw','Mac & Cheese','Grilled Corn Cob'],
   smallPrice: '$3.00'
 };
 
@@ -165,11 +165,13 @@ const extrasData = {
 
 export default function Body() {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full p-4">
       <Section {...chickenData} itemBasisStyle="basis-1/2 md:basis-1/3"/>
-      <HeatLevelsSection {...heatLevelData}/>
-      <Section {...sandwichData} itemBasisStyle="basis-full md:basis-1/2"/>
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-col md:flex-row gap-4">
+        <HeatLevelsSection {...heatLevelData}/>
+        <Section {...sandwichData} itemBasisStyle="basis-full"/>
+      </div>
+      <div className="flex flex-row gap-4">
         <BeveragesSection {...beveragesData}/>
         <SidesSection {...sideData}/>
       </div>
